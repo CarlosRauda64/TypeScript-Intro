@@ -1,15 +1,26 @@
+//Funciones
+//A los parametros en las funciones
+//se les debe asignar un tipo de datos
+//y el tipo de dato que retornara la funcion
+function geeting(fullname:string):string {
+  return "Hello World " + fullname;
+}
 
-let fullname="John Doe"
-let address:string = "El Salvador, San Salvador"
-let edad:number = 25
-let alive:boolean = true
-let asistencia = false
+console.log(geeting("Jorge"));
 
-let today:Date = new Date()
+const goodbye = (fullname:string):string => {
+  return "Goodbye " + fullname;
+}
 
-let cualquierCosa:any = "Hola"
+console.log(goodbye("Pedro"));
 
-console.log(fullname)
-console.log(address)
-console.log(edad)
-console.log(today)
+//Parametros opcionales
+function geetingOptional(fullname?:string):string {
+  if(fullname){
+    return "Hello World " + fullname;
+  }else{
+    return "Hello World";
+  }
+}
+
+console.log(geetingOptional());
