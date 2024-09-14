@@ -1,26 +1,40 @@
-//Funciones
-//A los parametros en las funciones
-//se les debe asignar un tipo de datos
-//y el tipo de dato que retornara la funcion
-function geeting(fullname:string):string {
-  return "Hello World " + fullname;
+interface IUsuario {
+  nombre: string;
+  apellido: string;
+  animalFav: string[];
+  edad: number;
+  vivo: boolean;
+  estatura: number;
 }
 
-console.log(geeting("Jorge"));
-
-const goodbye = (fullname:string):string => {
-  return "Goodbye " + fullname;
+let usuario: IUsuario = {
+  nombre: 'Carlos Rodrigo',
+  apellido: 'Portillo',
+  animalFav: ['Perros', 'Gatos', 'Leones'],
+  edad: 23,
+  vivo: true,
+  estatura: 2.00
 }
 
-console.log(goodbye("Pedro"));
+console.log(usuario.apellido)
 
-//Parametros opcionales
-function geetingOptional(fullname?:string):string {
-  if(fullname){
-    return "Hello World " + fullname;
-  }else{
-    return "Hello World";
-  }
+enum Genero {
+  Femenino = 'Femenino', 
+  Masculino = 'Masculino'
 }
 
-console.log(geetingOptional());
+type Alumno = {
+  nombre: string;
+  genero: Genero;
+  edad: number;
+  activo: boolean;
+}
+
+let alumno:Alumno = {
+  nombre: 'Carlos Rauda',
+  genero: Genero.Masculino,
+  edad: 21,
+  activo: true
+}
+
+console.log(alumno.genero)
